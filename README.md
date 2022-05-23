@@ -6,6 +6,7 @@ or not in the next six months.
 
 
 Brief of data set:
+
 ● train Data (train.csv) contains the customer demographics and past activity with
 the bank(10 independent features). And also the target label representing
 whether the customer will churn or not.
@@ -16,6 +17,7 @@ you need to predict whether the customer will churn or not.
 
 
 Evaluation Metric:
+
 ● The evaluation metric for this hackathon is macro f1 score.
 Public and Private Split
 Test data is further divided into Public (40%) and Private (60%) data
@@ -27,6 +29,7 @@ once the competition is over.
 
 
 Churn_prediction.ipynb description:
+
 The given train and test data set didn’t have any duplicate or null values.
 The test data independent features were further classified as:
 Product_Holdings, Credit_Category, Vintage, Income as ordinal data.
@@ -41,6 +44,7 @@ Univariate analysis:
 
 
 Categorical Variables -
+
 ● Target variable : Around 22% customers will churn after 6 months.
 
 ● Gender : Aound 55% of customers are male and 45% are female.
@@ -68,6 +72,7 @@ similar percentage of years of association with the bank(around 20%).
 ● Income:Most of the customers have an income range of 10L-15L and 5L-10L.
 
 Numerical Variables:
+
 ● Age: The distribution of age is fairly normal, and the box plot shows that there are
 some outliers. Most of the customers are from the age group 30-40.
 
@@ -76,6 +81,7 @@ some outliers.
 
 
 Bivariate Analysis:
+
 In this section the relation between Is_Churn (target variable) and remaining
 independent variables is being analyzed.
 For eg:
@@ -100,12 +106,14 @@ are more likely to churn.
 
 
 Multivariate Analysis:
+
 Relation of two or more independent variables with the target variable is studied in this
 section.
 Age and Is_Churn are positively correlated.
 Feature Engineering:
 Here, we seek to add features that are likely to have an impact on the probability of
 churning.
+
 ● Balance(average quarterly balance) and Vintage(No. of years associated with the
 bank) are functions of the year therefore combining them by dividing balance with
 vintage(when vintage=0 keep the balance as it is).
@@ -118,6 +126,7 @@ balance_vintage variable.
 Outlier Treatment on Age and Balance:
 One of the way to remove skewness is to take log transformation, it does not affect
 smaller values but reduces the larger values
+
 ● Since Age and Balance variables contain outliers and do not follow normal
 distribution closely we apply log and boxcox transformations on them
 respectively.
